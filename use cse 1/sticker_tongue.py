@@ -6,7 +6,7 @@ import numpy as np
 cascade_face = cv2.CascadeClassifier(cv2.data.haarcascades +'haarcascade_frontalface_default.xml') 
 cascade_smile = cv2.CascadeClassifier(cv2.data.haarcascades +'haarcascade_smile.xml')
 
-#function ot detect the face
+#function to detect the face
 
 # gray image of our face, original image:
 def detection(grayscale, img):
@@ -16,9 +16,6 @@ def detection(grayscale, img):
     
     #4 corrdinates in faces
     for (x_face, y_face, w_face, h_face) in face:
-        
-        #draw rectangle
-        #cv2.rectangle(img, (x_face, y_face), (x_face+w_face, y_face+h_face), (255, 130, 0), 2)
         
        
         #area of intreset in gray image
@@ -36,11 +33,7 @@ def detection(grayscale, img):
             
             #import image of tongue
             img_tongue= cv2.imread('tongue.png',-1)
-            #cv2.imshow('image', img_tongue) 
-            
-            #rectngle of smile , uncomment it to see rectangle of smile
-            #cv2.rectangle(ri_color,(x_smile, y_smile),(x_smile+w_smile, y_smile+h_smile), (255, 0,225), 2)    
-
+          
             #depth of tongue, width
             dept_tong, width_tong= img_tongue.shape[:2]
             
