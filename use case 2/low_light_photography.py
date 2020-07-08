@@ -3,14 +3,7 @@ import cv2
 import os
 import numpy as np
 path= os.getcwd()+ '/'+  'folder2'
-#'tempimage_folder'
-#'folder2'
 
-# f= cv2.imread(path+'/'+'WhatsApp Image 2020-06-13 at 12.02.03 AM.jpeg', -1)
-# if f is not None:
-#     cv2.imshow('image',f)
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows() 
 
 files = list([os.path.join(path, f) for f in os.listdir(path)])
 
